@@ -10,7 +10,12 @@ public class Test {
         ApplicationContext context=new ClassPathXmlApplicationContext("spring-config.xml");
 //        UserDao dao = (UserDao) context.getBean("userDao");
 //        dao.say();
-        UserService service= (UserService) context.getBean("userService");
+//        UserService service= (UserService) context.getBean("userService");
+        UserService service= (UserService) context.getBean("service2");
         service.say();
+//        System.out.println(context.getBean("userService"));
+//        System.out.println(context.getBean("userService"));
+//        ------------------------------------------------------
+        System.out.println(service);
     }
 }
