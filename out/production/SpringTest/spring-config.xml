@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="userDao" class="com.rony.dao.UserDaoImpl"></bean>
+<!--    静态方法实例化bean-->
+<!--    <bean  id="userService" class="com.rony.service.UserServiceImpl" factory-method="getUserService">-->
+<!--        <property  name="dao" ref="userDao"/>-->
+<!--    </bean>-->
+<!--    实例工厂实例化bean-->
+    <bean id="userService"  class="com.rony.service.UserServiceImpl" factory-bean="factory" factory-method="getUserService">
+        <property name="dao" ref="userDao"/>
+        <property name="list" >
+            <list>
+                <value>相思湖学院</value>
+                <value>计工系</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="factory" class="com.rony.factory.UserFactory"></bean>
+    <bean id="service2" class="com.rony.service.UserServiceImpl">
+        <constructor-arg index="0" ref="userDao"/>
+        <constructor-arg index="1" >
+            <list>
+                <value>广西</value>
+                <value>南宁</value>
+            </list>
+        </constructor-arg>
+
+    </bean>
+</beans>
