@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringAOPTest/SpringAOPTest.iml" filepath="$PROJECT_DIR$/SpringAOPTest/SpringAOPTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringJDBC/SpringJDBC.iml" filepath="$PROJECT_DIR$/SpringJDBC/SpringJDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest.iml" filepath="$PROJECT_DIR$/SpringTest.iml" />
     </modules>
   </component>
